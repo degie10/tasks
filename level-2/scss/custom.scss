@@ -1,0 +1,230 @@
+/*!
+ * Bootstrap v4.3.1 (https://getbootstrap.com/)
+ * Copyright 2011-2019 The Bootstrap Authors
+ * Copyright 2011-2019 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+ @import "functions";
+ @import "variables";
+ @import "mixins";
+ @import "root";
+ @import "reboot";
+ @import "type";
+ @import "images";
+ @import "code";
+ @import "grid";
+ @import "tables";
+ @import "forms";
+ @import "buttons";
+ @import "transitions";
+ @import "dropdown";
+ @import "button-group";
+ @import "input-group";
+ @import "custom-forms";
+ @import "nav";
+ @import "navbar";
+ @import "card";
+ @import "breadcrumb";
+ @import "pagination";
+ @import "badge";
+ @import "jumbotron";
+ @import "alert";
+ @import "progress";
+ @import "media";
+ @import "list-group";
+ @import "close";
+ @import "toasts";
+ @import "modal";
+ @import "tooltip";
+ @import "popover";
+ @import "carousel";
+ @import "spinners";
+ @import "utilities";
+ @import "print";
+ 
+ /* variables -----------------------------------------------------------------**/
+ 
+ :root {
+     --gray-color: #F0F0F0;
+     --white-color: #FFFFFF;
+     --black-color: #121212;
+     --accent-color: #E4C1AE;
+ }
+ 
+ 
+ /* base -----------------------------------------------------------------**/
+ 
+ *,
+ *::after,
+ *::before {
+     margin: 0;
+     padding: 0;
+     box-sizing: inherit;
+ }
+ 
+ html {
+     /* 1 rem=10px 10px/16px=62.5%  */
+     font-size: 62.5%;
+ }
+ 
+ body {
+     box-sizing: border-box;
+ }
+ 
+ 
+ /* mixin breakpoint -----------------------------------------------------------------*/
+ 
+ @mixin respond($breakpoint) {
+     @if $breakpoint==medium {
+         @media only screen and (min-width: 48em) {
+             @content
+         }
+ 
+         ; //768x
+     }
+ 
+     @if $breakpoint==large {
+         @media only screen and (min-width: 62em) {
+             @content
+         }
+ 
+         ; //992px
+     }
+ 
+     @if $breakpoint==extra-large {
+         @media only screen and (min-width: 75em) {
+             @content
+         }
+ 
+         ; //1200px
+     }
+ }
+ 
+ /* typography -----------------------------------------------------------------**/
+ 
+ body {
+     font-family: 'Roboto', sans-serif;
+     font-weight: 300;
+     line-height: 1.7;
+     font-size: 1.6rem;
+     color: var(--black-color);
+     background-color: var(--gray-color);
+ }
+ 
+ .heading-secondary {
+     font-size: 3rem;
+     font-weight: 700;
+     line-height: 4.9rem;
+ 
+     @include respond(medium) {
+         font-size: 3.5rem;
+     }
+ 
+     @include respond(extra-large) {
+         font-size: 4.2rem;
+     }
+ }
+ 
+ .paragraph {
+     font-size: 1.4rem;
+     line-height: 2.6rem;
+ 
+     @include respond(medium) {
+         font-size: 1.6rem;
+     }
+ }
+ 
+ 
+ /* section about -----------------------------------------------------------------*/
+ 
+ .section-about {
+     @include respond(medium) {
+         margin-top: 10rem;
+     }
+ }
+ 
+ .about {
+     background-color: var(--white-color);
+ 
+     @include respond(medium) {
+         display: flex;
+         align-items: center;
+     }
+ 
+     @include respond(extra-large) {
+         height: 40.7rem;
+     }
+ 
+     &__text {
+         padding: 1.5rem;
+ 
+         @include respond(medium) {
+             max-width: 35rem;
+         }
+ 
+         @include respond(large) {
+             margin-top: 1rem;
+             padding: 2rem 0;
+         }
+ 
+         @include respond(extra-large) {
+             margin-top: 1.8rem;
+         }
+     }
+ 
+     &__text p {
+         margin-top: 1rem;
+ 
+         @include respond(extra-large) {
+             margin-top: 4.2rem;
+         }
+     }
+ 
+     &__photo img {
+         @include respond(extra-large) {
+             width: 57rem;
+             height: 40.8rem;
+             object-fit: cover;
+         }
+     }
+ }
+ 
+ /* section about button-----------------------------------------------------------------*/
+ 
+ .btn--accent {
+     width: 10.8rem;
+     height: 3.76rem;
+     font-size: 1.4rem;
+     border-radius: 230rem;
+     float: right;
+     background-color: var(--accent-color);
+     color: var(--white-color);
+     font-weight: 700;
+     margin-top: 1.3rem;
+ 
+     @include respond(medium) {
+         width: 12.15rem;
+         height: 4.23rem;
+         font-size: 1.5rem;
+     }
+ 
+     @include respond(extra-large) {
+         margin-top: 2.6rem;
+         width: 13.5rem;
+         height: 4.7rem;
+         font-size: 1.6rem;
+     }
+ 
+     &:hover {
+         background-color: var(--white-color);
+         border: .2rem solid var(--accent-color);
+         color: var(--accent-color);
+     }
+
+ }
+
+ 
+ .tooltip-inner {
+    font-size: 1.5rem;
+}

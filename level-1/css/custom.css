@@ -1,0 +1,162 @@
+/* variables -----------------------------------------------------------------**/
+
+:root {
+    --gray-color: #F0F0F0;
+    --white-color: #FFFFFF;
+    --black-color: #121212;
+    --accent-color: #E4C1AE;
+}
+
+
+/* base -----------------------------------------------------------------**/
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    /* 1 rem=10px 10px/16px=62.5%  */
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+}
+
+
+/* typography -----------------------------------------------------------------**/
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    font-size: 1.6rem;
+    color: var(--black-color);
+    background-color: var(--gray-color);
+}
+
+.heading-secondary {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 4.9rem;
+}
+
+@media only screen and (min-width: 768px) {
+    .heading-secondary {
+        font-size: 3.5rem;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .heading-secondary {
+        font-size: 4.2rem;
+    }
+}
+
+.paragraph {
+    font-size: 1.4rem;
+    line-height: 2.6rem;
+}
+
+@media only screen and (min-width: 768px) {
+    .paragraph {
+        font-size: 1.6rem;
+    }
+}
+
+
+/* section about -----------------------------------------------------------------*/
+
+.about {
+    background-color: var(--white-color);
+}
+
+.about__text {
+    padding: 1.5rem;
+}
+
+.about__text p {
+    margin-top: 1rem;
+}
+
+.btn--accent{
+    width: 10.8rem;
+    height: 3.76rem;
+    font-size: 1.4rem;
+    border-radius: 230rem;
+    float: right;
+    background-color: var(--accent-color);
+    color: var(--white-color);
+    font-weight: 700;
+    margin-top: 1.3rem;
+}
+
+
+.btn--accent:hover {
+    background-color: var(--white-color);
+    border: .2rem solid var(--accent-color);
+    color: var(--accent-color);
+}
+
+@media only screen and (min-width: 768px) {
+    .section-about {
+        margin-top: 10rem;
+    }
+
+    .about {
+        display: flex;
+        align-items: center;
+    }
+
+    .about__text {
+        max-width: 35rem;
+
+    }
+
+    .btn--accent{
+        width: 12.15rem;
+        height: 4.23rem;
+        font-size: 1.5rem;
+    }
+
+    @media only screen and (min-width: 992px) {
+        .about__text {
+            margin-top: 1rem;
+            padding: 2rem 0;
+        }
+
+        .btn--accent {
+            width: 13.5rem;
+            height: 4.7rem;
+            font-size: 1.6rem;
+        }
+    }
+
+    @media only screen and (min-width: 1200px) {
+        .about {
+           height: 40.7rem;   
+        }
+
+        .about__photo img {
+            width: 57rem;
+            height: 40.8rem;
+            object-fit: cover;
+        }
+
+        .about__text {
+            margin-top: 1.8rem;
+        }
+
+        .about__text p {
+            margin-top: 4.2rem;
+        }
+
+        .btn--accent{
+            margin-top: 2.6rem;
+        }
+    }
+}
